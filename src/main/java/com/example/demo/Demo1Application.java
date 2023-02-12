@@ -9,14 +9,12 @@ public class Demo1Application {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-        String answ = "NO";
 
+        String answ = "NO";
         boolean inter = false;
         char[] carray = str.toCharArray();
         int len = str.length();
-        if (len < 10)
-            System.out.println(answ);
-        else {
+        if (len > 9) {
             for (int i = 0; i < len - 9; i++) {
                 for (int j = i; j < i + 9; j++) {
                     for (int k = j + 1; k < i + 10; k++) {
@@ -35,8 +33,6 @@ public class Demo1Application {
             }
         }
         if (answ.equals("NO")) System.out.println(answ);
-        long usedBytes = Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
-        System.out.println(usedBytes);
     }
 }
 
